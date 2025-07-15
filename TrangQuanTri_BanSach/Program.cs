@@ -4,6 +4,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using TrangQuanTri_BanSach.Models.Domain;
+using TrangQuanTri_BanSach.Repo.Abstract;
+using TrangQuanTri_BanSach.Repo.Implement;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<DatabaseContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("chuoiketnoi"))
   );
+
+builder.Services.AddScoped<IGenreService, GenreService>();
 
 var app = builder.Build();
 

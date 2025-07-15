@@ -30,3 +30,42 @@ máy 1(local): json (database + data + procedure)
 máy 2(server): IIS, docker
 
 tedu
+
+domain địa chỉ trang web
+main (mainboard) bo mạch chủ => chip gắn trên bo mạch chủ
+cpu
+
+this
+_
+Remove
+
+devops -> tạo server bằng một máy có cài hệ điều hành linux
+công việc -> windows là chủ yếu
+
+học -> kiến thức
+làm -> kỹ năng (biến kiến thức thành kỹ năng)
+
+react... (nhiều job)
+blazor (ít job)
+
+react là một library
+blazor (chủ yếu code bằng C#)
+asp.net mvc, asp.net core mvc => code javascript thuần (ajax, jquery)
+
+asp.net mvc (.net framework 4.8) => chỉ deploy được trên windows
+asp.net core mvc (.net core 6 8 9, preview .net core 10) => deploy đa nền tảng (triển khai trên linux nginx kernel ...; windows IIS)
+docker trên linux (cài bằng câu lệnh command line)
+docker trên windows (giao diện)
+
+hosting cho khỏe ^^
+
+docker desktop
+
+lazydocker
+
+cloud
+
+người sử dụng công nghệ
+không phải là người tạo ra công nghệ
+
+
