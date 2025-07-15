@@ -1,0 +1,43 @@
+https
+win 11 không check
+win 10 đã update thì không check
+
+https://tpvncode.blogspot.com/2024/05/2-install-sql-server-2022-and-sql-server-management-studio-ssms.html
+
+sql:
+asp.net webform dùng chuẩn sql cũ
+asp.net mvc (mvc, .net core, blazor) sql chuẩn mới
+
+ajax: cách code load dữ liệu nhưng không load lại trang
+dùng jquery (thư viện: function, method javasript)
+
+C#: 
+windows forms => ứng dụng desktop: tạo app từ điển
+(bộ từ điển online -> get từ github)
+webform => trình duyệt => tạo ứng dụng được
+asp.net mvc, asp.net core, blazor
+
+blazor: ứng dụng máy tính, ứng dụng điện thoại (chung database, vps windows, sql server)
+
+dùng notepad++: dùng để viết code
+biên dịch code là biên dịch trên máy (hệ điều hành)
+
+vs: tích hợp trình viết code + biên dịch
+
+notepad++: note tài liệu, code html css thuần
+
+cùng một cấu hình laptop sẽ bị lag hơn so với máy bàn
+hp cứng
+dell mềm
+
+format -> fix bios
+
+vps linux -> certbot -> ssl free
+
+.net hosted runtime
+dotnet-hosting-8.0.17-win.exe (cài trong vps, hosting) => kết nối iis với .net core
+web forms .net chỉ cần iis là đủ
+IIS
+
+quản trị thường dùng blazor: menu dọc
+trang bán hàng: .net core (mặc định menu ngang)
