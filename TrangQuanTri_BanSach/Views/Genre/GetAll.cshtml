@@ -1,0 +1,39 @@
+﻿@model IEnumerable<TrangQuanTri_BanSach.Models.Domain.Genre>
+@{
+    
+}
+
+<div class="container pt-5">
+  
+  <div class="row">
+    <div class="col-md-6">
+      <a class="btn btn-success" href="/Genre/Add">Thêm thể loại sách</a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Trang danh sách thể loại</h3>
+      <table class="table table-striped table-bordered table-dark">
+        <thead>
+          <tr>
+            <th>Tên thể loại (Name)</th>
+            <th>Tính năng (Action, Hành động)</th>
+          </tr>
+        </thead>
+        <tbody>
+          @foreach (var item in Model)
+          {
+            <tr>
+              <td>@item.Name</td>
+              <td>
+                <a class="btn btn-success" href="/Genre/Update?id=@item.Id">Sửa</a>
+                <a class="btn btn-danger" onclick="return window.confirm('Bạn có chắc muốn xóa nó không?')" href="/Genre/Delete?id=@item.Id">Xóa</a>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
