@@ -63,7 +63,6 @@ namespace TrangQuanTri_BanSach.Controllers
       return View(model);
     }
 
-    [HttpPost]
     public IActionResult Delete(int id)
     {
       var result = _authorService.Delete(id);

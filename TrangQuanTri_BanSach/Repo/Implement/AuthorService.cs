@@ -33,7 +33,7 @@ namespace TrangQuanTri_BanSach.Repo.Implement
       try
       {
         var data = FindById(id);
-        if (data != null)
+        if (data == null)
         {
           return false;
         }

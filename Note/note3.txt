@@ -39,6 +39,37 @@ học web -> phải biết html, css
 
 cách cũ: khai báo thư viện jquery + code ajax
 
-bước 1: tạo service (thêm/xóa/sửa)
+bước 1: tạo service (thêm/xóa/sửa), khai báo service trong program
 bước 2: tạo controller (thêm/xóa/sửa)
 bước 3: tạo giao diện (thêm/xóa/sửa)
+
+parameter tham số
+
+MCV
+
+MVC (model-view-controller)
+
+coder -> leader -> tester
+tester -> coder -> leader ... -> khách hàng -> report -> coder (quy trình của nhật)
+
+QA (quality assurance) -> khách hàng
+
+pt-5 padding top 5
+
+Microsoft Visual Studio 2022 Community vs2022
+chuyên về code backend
+frontend (code không ok lắm)
+vscode visual studio code
+
+C theo phong cách microsoft (khó code C dùng cho nhúng lắm)
+C không thuần
+C++ vẫn code theo kiểu bình thường được
+
+C vẫn dùng VSCode cho bền
+C thuần trên windows https://www.msys2.org/
+
+IDE tích hợp VS2022, elipse, ... nặng
+VSCode: chỉ để edit code, còn chạy thì dùng môi trường windows: console, command line
+
+
+
