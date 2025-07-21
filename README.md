@@ -75,6 +75,6 @@ học web -> phải biết html, css
 
 cách cũ: khai báo thư viện jquery + code ajax
 
-bước 1: tạo service (thêm/xóa/sửa)
-bước 2: tạo controller (thêm/xóa/sửa)
-bước 3: tạo giao diện (thêm/xóa/sửa)
+## bước 1: tạo service (thêm/xóa/sửa)
+## bước 2: tạo controller (thêm/xóa/sửa)
+## bước 3: tạo giao diện (thêm/xóa/sửa)

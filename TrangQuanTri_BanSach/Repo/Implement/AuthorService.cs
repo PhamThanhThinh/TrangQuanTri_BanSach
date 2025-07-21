@@ -1,25 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using TrangQuanTri_BanSach.Models.Domain;
 using TrangQuanTri_BanSach.Repo.Abstract;
 
 namespace TrangQuanTri_BanSach.Repo.Implement
 {
-  public class GenreService : IGenreService
+  public class AuthorService : IAuthorService
   {
     private readonly DatabaseContext _dbContext;
 
-    public GenreService(DatabaseContext dbContext)
+    public AuthorService(DatabaseContext dbContext)
     {
       _dbContext = dbContext;
     }
 
-    public bool Add(Genre model)
+    public bool Add(Author model)
     {
       try
       {
-        _dbContext.Genre.Add(model);
+        _dbContext.Author.Add(model);
         _dbContext.SaveChanges();
         return true;
       }
@@ -34,12 +33,12 @@ namespace TrangQuanTri_BanSach.Repo.Implement
       try
       {
         var data = FindById(id);
-        if (data == null)
+        if (data != null)
         {
           return false;
         }
 
-        _dbContext.Genre.Remove(data);
+        _dbContext.Author.Remove(data);
         _dbContext.SaveChanges();
         return true;
       }
@@ -49,21 +48,21 @@ namespace TrangQuanTri_BanSach.Repo.Implement
       }
     }
 
-    public Genre FindById(int id)
+    public Author FindById(int id)
     {
-      return _dbContext.Genre.Find(id);
+      return _dbContext.Author.Find(id);
     }
 
-    public IEnumerable<Genre> GetAll()
+    public IEnumerable<Author> GetAll()
     {
-      return _dbContext.Genre.ToList();
+      return _dbContext.Author.ToList();
     }
 
-    public bool Update(Genre model)
+    public bool Update(Author model)
     {
       try
       {
-        _dbContext.Genre.Update(model);
+        _dbContext.Author.Update(model);
         _dbContext.SaveChanges();
         return true;
       }

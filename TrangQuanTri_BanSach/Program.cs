@@ -17,6 +17,7 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("chuoiketnoi"))
   );
 
 builder.Services.AddScoped<IGenreService, GenreService>();
+builder.Services.AddScoped<IAuthorService, AuthorService>();
 
 var app = builder.Build();
 

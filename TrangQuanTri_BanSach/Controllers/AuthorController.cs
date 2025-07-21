@@ -1,19 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Net.WebSockets;
 using TrangQuanTri_BanSach.Models.Domain;
 using TrangQuanTri_BanSach.Repo.Abstract;
+using TrangQuanTri_BanSach.Repo.Implement;
 
 namespace TrangQuanTri_BanSach.Controllers
 {
-  public class GenreController : Controller
+  public class AuthorController : Controller
   {
-    //private readonly IGenreService genreService;
-    private readonly IGenreService _genreService;
+    private readonly IAuthorService _authorService;
 
-    public GenreController(IGenreService genreService)
+    public AuthorController(IAuthorService authorService)
     {
-      //this.genreService = genreService;
-      _genreService = genreService;
+      _authorService = authorService;
     }
 
     [HttpGet]
@@ -23,13 +21,13 @@ namespace TrangQuanTri_BanSach.Controllers
     }
 
     [HttpPost]
-    public IActionResult Add(Genre model)
+    public IActionResult Add(Author model)
     {
       if (!ModelState.IsValid)
       {
         return View(model);
       }
-      var result = _genreService.Add(model);
+      var result = _authorService.Add(model);
       if (result)
       {
         TempData["msg"] = "Thêm Thành Công";
@@ -43,18 +41,18 @@ namespace TrangQuanTri_BanSach.Controllers
     [HttpGet]
     public IActionResult Update(int id)
     {
-      var record = _genreService.FindById(id);
+      var record = _authorService.FindById(id);
       return View(record);
     }
 
     [HttpPost]
-    public IActionResult Update(Genre model)
+    public IActionResult Update(Author model)
     {
       if (!ModelState.IsValid)
       {
         return View(model);
       }
-      var result = _genreService.Update(model);
+      var result = _authorService.Update(model);
       if (result)
       {
         TempData["msg"] = "Sửa Thành Công";
@@ -65,15 +63,16 @@ namespace TrangQuanTri_BanSach.Controllers
       return View(model);
     }
 
+    [HttpPost]
     public IActionResult Delete(int id)
     {
-      var result = _genreService.Delete(id);
+      var result = _authorService.Delete(id);
       return RedirectToAction("GetAll");
     }
 
     public IActionResult GetAll()
     {
-      var ketqua = _genreService.GetAll();
+      var ketqua = _authorService.GetAll();
       return View(ketqua);
     }
 
