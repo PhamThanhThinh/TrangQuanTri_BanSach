@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using TrangQuanTri_BanSach.Models.Domain;
 using TrangQuanTri_BanSach.Repo.Abstract;
 
@@ -13,11 +15,11 @@ namespace TrangQuanTri_BanSach.Repo.Implement
       _dbContext = dbContext;
     }
 
-    public bool Add(Book model)
+    public bool Add(Genre model)
     {
       try
       {
-        _dbContext.Add(model);
+        _dbContext.Genre.Add(model);
         _dbContext.SaveChanges();
         return true;
       }
@@ -37,7 +39,7 @@ namespace TrangQuanTri_BanSach.Repo.Implement
           return false;
         }
 
-        _dbContext.Remove(data);
+        _dbContext.Genre.Remove(data);
         _dbContext.SaveChanges();
         return true;
       }
@@ -47,21 +49,21 @@ namespace TrangQuanTri_BanSach.Repo.Implement
       }
     }
 
-    public Book FindById(int id)
+    public Genre FindById(int id)
     {
-      
+      return _dbContext.Genre.Find(id);
     }
 
-    public IEnumerable<Book> GetAll()
+    public IEnumerable<Genre> GetAll()
     {
-      throw new System.NotImplementedException();
+      return _dbContext.Genre.ToList();
     }
 
-    public bool Update(Book model)
+    public bool Update(Genre model)
     {
       try
       {
-        _dbContext.Update(model);
+        _dbContext.Genre.Update(model);
         _dbContext.SaveChanges();
         return true;
       }

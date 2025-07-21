@@ -9,7 +9,7 @@ namespace TrangQuanTri_BanSach.Repo.Abstract
     bool Add(Genre model);
     bool Update(Genre model);
     bool Delete(int id);
-    Book FindById(int id);
-    IEnumerable<Book> GetAll();
+    Genre FindById(int id);
+    IEnumerable<Genre> GetAll();
   }
 }

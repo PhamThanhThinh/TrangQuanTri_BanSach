@@ -1,0 +1,35 @@
+﻿@model TrangQuanTri_BanSach.Models.Domain.Genre
+@{
+    
+}
+
+<div class="container pt-5">
+  
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Trang thêm thể loại</h3>
+      <form asp-action="Add" method="post">
+        <div class="mb-3">
+          <label asp-for="Name">Tên thể loại của cuốn sách:</label>
+          <input asp-for="Name" type="text" class="form-control" />
+          <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        @if (TempData["msg"] != null)
+        {
+          <div class="mb-3">
+            @TempData["msg"]
+          </div>
+        }
+
+        <div class="mb-3">
+          <button type="submit" class="btn btn-success">Thêm</button>
+          <a href="/Genre/GetAll" class="btn btn-primary">Danh sách thể loại</a>
+        </div>
+
+        
+
+      </form>
+    </div>
+  </div>
+</div>
