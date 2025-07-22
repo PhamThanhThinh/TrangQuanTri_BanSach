@@ -78,3 +78,47 @@ cách cũ: khai báo thư viện jquery + code ajax
 ## bước 1: tạo service (thêm/xóa/sửa)
 ## bước 2: tạo controller (thêm/xóa/sửa)
 ## bước 3: tạo giao diện (thêm/xóa/sửa)
+
+# Note 4 (phần 4/buổi phát trực tiếp số 4)
+bootstrap
+bước 1: tạo service
+bước 2: đăng ký service trong Program.cs
+bước 3: tạo controller
+bước 4: tạo giao diện
+
+commit
+push (đẩy code lên git)
+
+git convention
+
+tab
+
+f5 và ctrl f5
+code asp.net webform => ctrl f5 => xóa cache => load view (cập nhật lại giao diện)
+asp.net core mvc
+
+đặt breakpoint để fixbug
+
+làm trang quản trị cho trang bán sách (quản lý sách)
+
+phím tắt thường dùng:
+ctrl . (bị lỗi, code nhanh)
+ctrl space
+
+tạo constructor hàm dựng trong C# (phải viết để dùng)
+hàm hủy destructor (trong C# là tự động, trong C++ phải viết)
+
+git:
+commit gôm vô một nhóm chuẩn bị đẩy lên
+push đẩy code lên
+pull đồng bộ code
+
+trong bootstrap 5 thì mb thay thế cho form group khi dùng trong thẻ form
+
+One Dark Pro dành cho Microsoft Visual Studio 2019 và 2022
+https://marketplace.visualstudio.com/items?itemName=adrianwilczynski.one-dark-pro
+
+update-database
+cập nhật lại database thì dễ bị sai hơn so với cách tạo luôn một ViewModel riêng
+
+null exception
