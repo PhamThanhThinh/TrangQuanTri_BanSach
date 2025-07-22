@@ -1,4 +1,5 @@
 ﻿
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace TrangQuanTri_BanSach.Models.Domain
@@ -10,5 +11,7 @@ namespace TrangQuanTri_BanSach.Models.Domain
     // tên nhà xuất bản
     [Required]
     public string PublisherName { get; set; }
+
+    public ICollection<Book> Books { get; set; } = [];
   }
 }

@@ -1,4 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TrangQuanTri_BanSach.Models.Domain
 {
@@ -20,7 +23,26 @@ namespace TrangQuanTri_BanSach.Models.Domain
     [Required]
     public int PublisherId { get; set; }
 
+    // mã định danh thể loại
     [Required]
     public int GenreId { get; set; }
+
+    public Author Author { get; set; }
+    public Publisher Publisher { get; set; }
+    public Genre Genre { get; set; }
+
+    [NotMapped]
+    public string? AuthorName { get; set; }
+    [NotMapped]
+    public string? PublisherName { get; set; }
+    [NotMapped]
+    public string? GenreName { get; set; }
+
+    [NotMapped]
+    public List<SelectListItem>? AuthorList { get; set; }
+    [NotMapped]
+    public List<SelectListItem>? PublisherList { get; set; }
+    [NotMapped]
+    public List<SelectListItem>? GenreList { get; set; }
   }
 }

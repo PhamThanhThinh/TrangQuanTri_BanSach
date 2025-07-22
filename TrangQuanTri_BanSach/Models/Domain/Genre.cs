@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace TrangQuanTri_BanSach.Models.Domain
 {
@@ -11,6 +12,8 @@ namespace TrangQuanTri_BanSach.Models.Domain
     // tên thể loại
     [Required]
     public string Name { get;set; }
+
+    public ICollection<Book> Books { get; set; } = [];
 
   }
 }

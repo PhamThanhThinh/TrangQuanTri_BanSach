@@ -63,12 +63,14 @@ namespace TrangQuanTri_BanSach.Controllers
       return View(model);
     }
 
+    [HttpGet]
     public IActionResult Delete(int id)
     {
       var result = _authorService.Delete(id);
       return RedirectToAction("GetAll");
     }
 
+    [HttpGet]
     public IActionResult GetAll()
     {
       var ketqua = _authorService.GetAll();
