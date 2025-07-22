@@ -18,6 +18,11 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("chuoiketnoi"))
 
 builder.Services.AddScoped<IGenreService, GenreService>();
 builder.Services.AddScoped<IAuthorService, AuthorService>();
+builder.Services.AddScoped<IPublisherService, PublisherService>();
+builder.Services.AddScoped<IBookService, BookService>();
+
+//builder.Services.AddTransient
+//builder.Services.AddSingleton
 
 var app = builder.Build();
 

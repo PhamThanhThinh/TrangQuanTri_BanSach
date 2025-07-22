@@ -1,0 +1,35 @@
+﻿@model TrangQuanTri_BanSach.Models.Domain.Publisher
+@{
+
+}
+
+<div class="container pt-5">
+
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Trang thêm nhà xuất bản</h3>
+      <form asp-action="Add" method="post">
+        <div class="mb-3">
+          <label asp-for="PublisherName">Tên nhà xuất bản:</label>
+          <input asp-for="PublisherName" type="text" class="form-control" />
+          <span asp-validation-for="PublisherName" class="text-danger"></span>
+        </div>
+
+        @if (TempData["msg"] != null)
+        {
+          <div class="mb-3">
+            @TempData["msg"]
+          </div>
+        }
+
+        <div class="mb-3">
+          <button type="submit" class="btn btn-success">Thêm</button>
+          <a href="/Publisher/GetAll" class="btn btn-primary">Danh sách nhà xuất bản</a>
+        </div>
+
+
+
+      </form>
+    </div>
+  </div>
+</div>

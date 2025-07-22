@@ -1,25 +1,27 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using TrangQuanTri_BanSach.Models.Domain;
 using TrangQuanTri_BanSach.Repo.Abstract;
 
 namespace TrangQuanTri_BanSach.Repo.Implement
 {
-  public class PublisherService : IPublisherService
+  public class BookService : IBookService
   {
     private readonly DatabaseContext _dbContext;
 
-    public PublisherService(DatabaseContext dbContext)
+    public BookService(DatabaseContext dbContext)
     {
       _dbContext = dbContext;
     }
 
-    public bool Add(Publisher model)
+    // generate code theo thứ tự alphabet
+    // theo bảng chữ cái alphabet
+
+    public bool Add(Book model)
     {
       try
       {
-        _dbContext.Publisher.Add(model);
+        _dbContext.Book.Add(model);
         _dbContext.SaveChanges();
         return true;
       }
@@ -39,7 +41,7 @@ namespace TrangQuanTri_BanSach.Repo.Implement
           return false;
         }
 
-        _dbContext.Publisher.Remove(data);
+        _dbContext.Book.Remove(data);
         _dbContext.SaveChanges();
         return true;
       }
@@ -49,21 +51,21 @@ namespace TrangQuanTri_BanSach.Repo.Implement
       }
     }
 
-    public Publisher FindById(int id)
+    public Book FindById(int id)
     {
-      return _dbContext.Publisher.Find(id);
+      return _dbContext.Book.Find(id);
     }
 
-    public IEnumerable<Publisher> GetAll()
+    public IEnumerable<Book> GetAll()
     {
-      return _dbContext.Publisher.ToList();
+      return _dbContext.Book.ToList();
     }
 
-    public bool Update(Publisher model)
+    public bool Update(Book model)
     {
       try
       {
-        _dbContext.Publisher.Update(model);
+        _dbContext.Book.Update(model);
         _dbContext.SaveChanges();
         return true;
       }
@@ -72,8 +74,5 @@ namespace TrangQuanTri_BanSach.Repo.Implement
         return false;
       }
     }
-
-
-
   }
 }

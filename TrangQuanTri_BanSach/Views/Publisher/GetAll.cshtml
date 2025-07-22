@@ -1,0 +1,39 @@
+﻿@model IEnumerable<TrangQuanTri_BanSach.Models.Domain.Publisher>
+@{
+    
+}
+
+<div class="container pt-5">
+  
+  <div class="row">
+    <div class="col-md-6">
+      <a class="btn btn-success" href="/Publisher/Add">Thêm nhà xuất bản</a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Trang danh sách nhà xuất bản</h3>
+      <table class="table table-striped table-bordered table-dark">
+        <thead>
+          <tr>
+            <th>Tên nhà xuất bản (Name)</th>
+            <th>Tính năng (Action, Hành động)</th>
+          </tr>
+        </thead>
+        <tbody>
+          @foreach (var item in Model)
+          {
+            <tr>
+              <td>@item.PublisherName</td>
+              <td>
+                <a class="btn btn-success" href="/Publisher/Update?id=@item.Id">Sửa</a>
+                <a class="btn btn-danger" onclick="return window.confirm('Bạn có chắc muốn xóa nó không?')" href="/Publisher/Delete?id=@item.Id">Xóa</a>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
