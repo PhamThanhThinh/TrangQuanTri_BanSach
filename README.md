@@ -122,3 +122,6 @@ update-database
 cập nhật lại database thì dễ bị sai hơn so với cách tạo luôn một ViewModel riêng
 
 null exception
+
+## cách viết git commit convention:
+https://devops.vn/posts/cach-viet-git-commit-convention-chuan-chinh-lam-code-sach-doi-lam-drama/?fbclid=IwZXh0bgNhZW0CMTAAAR6ddEBhpCWBEvJRfLdZTJNCaKyx7Dw3JBzfJuPf1TRNdACnghyqMIcK-ClyXA_aem_3CCJVP0vA4w9GnfDZvvU4Q
