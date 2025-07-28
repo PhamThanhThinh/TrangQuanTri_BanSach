@@ -71,5 +71,6 @@ C thuần trên windows https://www.msys2.org/
 IDE tích hợp VS2022, elipse, ... nặng
 VSCode: chỉ để edit code, còn chạy thì dùng môi trường windows: console, command line
 
-
+blazor
+quản lý nhân viên dùng blazor (thêm xóa sửa) 
 

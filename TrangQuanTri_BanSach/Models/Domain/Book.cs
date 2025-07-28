@@ -27,9 +27,9 @@ namespace TrangQuanTri_BanSach.Models.Domain
     [Required]
     public int GenreId { get; set; }
 
-    public Author Author { get; set; }
-    public Publisher Publisher { get; set; }
-    public Genre Genre { get; set; }
+    public Author Author { get; set; } = null;
+    public Publisher Publisher { get; set; } = null;
+    public Genre Genre { get; set; } = null;
 
     [NotMapped]
     public string? AuthorName { get; set; }

@@ -2,6 +2,7 @@
 //using System.Collections.Generic;
 
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace TrangQuanTri_BanSach.Models.Domain
 {
@@ -9,6 +10,8 @@ namespace TrangQuanTri_BanSach.Models.Domain
   public class Author
   {
     public int Id { get; set; }
+    
+    [Required]
     public string AuthorName { get; set; }
 
     public ICollection<Book> Books { get; set; } = [];

@@ -4,7 +4,7 @@ namespace TrangQuanTri_BanSach.Models.Domain
 {
   public class DatabaseContext : DbContext
   {
-    // ctor
+    // ctor (gõ code nhanh)
     public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
     {
       

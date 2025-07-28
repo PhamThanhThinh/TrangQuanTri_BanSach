@@ -40,3 +40,60 @@ update-database
 cập nhật lại database thì dễ bị sai hơn so với cách tạo luôn một ViewModel riêng
 
 null exception
+
+code first
+update-database
+
+vps remote
+
+asp.net webforms, asp.net mvc, asp.net core mvc => thuần javascript, library react, ... code frontend
+blazor => dùng c# kết hợp một phần rất rất nhỏ javascript để code frontend
+
+backend => c#
+
+SSL chứng chỉ để chạy https
+tin tưởng vào đăng nhập windows (khác với tài khoản sa)
+
+tìm lỗi để fix
+
+sql server
+management studio (update)
+
+
+sql server mới nhất - SSMS 20.1 & SSMS 20.2
+
+sql server + management studio 2008
+2022
+2008 - windows server bản thấp (không kk cài windows server bản quá thấp) - khuyến khích
+
+
+làm một trang quản trị (admin)
+
+chia: admin và user
+
+IIS
+https
+
+subtitle phụ đề
+
+hay dùng ajax ở:
+webforms
+asp.net mvc
+
+asp.net core mvc (có thể hoặc không)
+
+blazor không dùng ajax (code web)
+blazor hybrid (code app giống như code web)
+
+
+PM chia dùm task cho nguyên project
+mỗi công ty đều có phần mềm quản lý task riêng
+
+
+Q&A
+QA (về trễ nhất, làm ca tối)
+=> khách hàng ok -> pass
+=> khách hàng không ok -> đưa lại cho người đã làm task đó, kể cả khi đã nhảy sang project khác (cùng công ty), khác công ty???
+
+
+
